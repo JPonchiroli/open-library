@@ -8,7 +8,8 @@ class BookUpdateDto extends DTO {
 
     public function __construct(
         public string $title,
-        public string $author
+        public string $author,
+        public string $book_cover_url
     ) {}
 
     public static function fromRequest(array $request): self
@@ -16,7 +17,8 @@ class BookUpdateDto extends DTO {
         
         return new self(
             $request['title'],
-            $request['author']
+            $request['author'],
+            $request['book_cover_url']
         );
 
     }

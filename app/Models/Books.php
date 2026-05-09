@@ -7,7 +7,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-#[Fillable(['title, author, isbn, available_copies'])]
+#[Fillable([
+    'title',
+    'author',
+    'isbn',
+    'available_copies',
+    'book_cover_url'
+])]
 class Books extends Model
 {
     use HasFactory;

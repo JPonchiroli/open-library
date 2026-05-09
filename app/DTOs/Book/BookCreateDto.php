@@ -11,6 +11,7 @@ class BookCreateDto extends DTO {
         public string $author,
         public string $isbn,
         public int $available_copies,
+        public string $book_cover_url
     ) {}
 
     public static function fromRequest(array $request): self
@@ -20,7 +21,8 @@ class BookCreateDto extends DTO {
             $request['title'],
             $request['author'],
             $request['isbn'],
-            $request['available_copies']
+            $request['available_copies'],
+            $request['book_cover_url']
         );
 
     }
