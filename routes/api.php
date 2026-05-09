@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 
-Route::get('/users/{id}', [BookController::class, 'show']);
-Route::get('/users', [BookController::class, 'index']);
-Route::delete('/users/{id}', [BookController::class, 'delete']);
-Route::post('/users', [BookController::class, 'store']);
-Route::put('/users/{id}', [BookController::class, 'update']);
+Route::get('books/{id}', [BookController::class, 'show']);
+Route::get('books', [BookController::class, 'index']);
+Route::delete('books/{id}', [BookController::class, 'delete']);
+Route::post('books', [BookController::class, 'store']);
+Route::put('books/{id}', [BookController::class, 'update']);
