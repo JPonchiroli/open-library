@@ -1,12 +1,13 @@
 <?php
 
-use App\Repositories\BaseRepository;
+namespace App\Services; 
+
 use App\Services\BaseService;
+use App\Repositories\BookRepository;
 
 class BookService extends BaseService {
 
-    #[Override]
-    public function __construct(BaseRepository $repository)
+    public function __construct(BookRepository $repository)
     {
         return parent::__construct($repository);
     }

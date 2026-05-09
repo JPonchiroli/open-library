@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use BookService;
+
 use App\DTOs\Book\BookCreateDto;
 use App\DTOs\Book\BookUpdateDto;
 use App\Http\Resources\BaseResource;
 use App\Http\Requests\Book\BookStoreRequest;
 use App\Http\Requests\Book\BookUpdateRequest;
-
+use App\Services\BookService as ServicesBookService;
 class BookController extends Controller
 {
         public function __construct(
-        public BookService $bookService
+        public ServicesBookService $bookService
     ) {}
 
     
