@@ -14,12 +14,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
     'available_copies',
     'book_cover_url'
 ])]
-class Books extends Model
+class Book extends Model
 {
     use HasFactory;
 
     public function loans(): HasMany
     {
-        return $this->hasMany(Loans::class);
+        return $this->hasMany(Loan::class);
     }
 }

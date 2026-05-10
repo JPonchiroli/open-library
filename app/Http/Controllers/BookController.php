@@ -8,11 +8,11 @@ use App\DTOs\Book\BookUpdateDto;
 use App\Http\Resources\BaseResource;
 use App\Http\Requests\Book\BookStoreRequest;
 use App\Http\Requests\Book\BookUpdateRequest;
-use App\Services\BookService as ServicesBookService;
+use App\Services\BookService;
 class BookController extends Controller
 {
-        public function __construct(
-        public ServicesBookService $bookService
+    public function __construct(
+        public BookService $bookService
     ) {}
 
     

@@ -2,11 +2,11 @@
 
 namespace App\Repositories;
 
-use App\Models\Books;
+use App\Models\Book;
 
 class BookRepository extends BaseRepository {
 
-    public function __construct(Books $model)
+    public function __construct(Book $model)
     {
         parent::__construct($model);
     }
