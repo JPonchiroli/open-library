@@ -1,10 +1,10 @@
+import { router, usePage } from '@inertiajs/react';
+import { Modal, Box, Typography, TextField, Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 
-import { router, usePage } from '@inertiajs/react';
 
 import { toast } from 'sonner';
 
-import { Modal, Box, Typography, TextField, Button } from '@mui/material';
 
 type LoanModalProps = {
     open: boolean;
