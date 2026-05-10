@@ -31,7 +31,7 @@ class LoanService extends BaseService {
         if (!$isAvailable)
             throw new ApiException(Response::HTTP_BAD_REQUEST, 'The book is not available');
 
-        Book::where('book_id', $dto->book_id)
+        Book::where('id', $dto->book_id)
             ->decrement('available_copies');
 
         return $this->repository->create($dto);
