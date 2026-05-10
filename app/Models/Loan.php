@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
     'loan_date',
     'return_date'
 ])]
-class Loans extends Model
+class Loan extends Model
 {
     use HasFactory;
 
@@ -24,6 +24,6 @@ class Loans extends Model
 
     public function book(): BelongsTo
     {
-        return $this->belongsTo(Books::class);
+        return $this->belongsTo(Book::class);
     }
 }

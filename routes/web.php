@@ -2,6 +2,7 @@
 
 use Laravel\Fortify\Features;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoanController;
 use App\Http\Controllers\DashboardController;
 
 Route::inertia('/', 'welcome', [
@@ -11,5 +12,7 @@ Route::inertia('/', 'welcome', [
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
+
+Route::post('loans', [LoanController::class, 'store']);
 
 require __DIR__.'/settings.php';
